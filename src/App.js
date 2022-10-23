@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Kallas för en fragment när det bara är taggar (?), allt måste vara inom denna (ett parent-element)
+    <>
+
+    </>
   );
 }
 
 export default App;
+
+// OBS! När du gör ett html element med en class måste du nu skriva className istället för class
