@@ -1,0 +1,152 @@
+@import './Navigation';
+
+
+/* Global */
+:root {
+  --color-theme: #FF7373;
+  --color-dark: #222529;
+  --linear-gradient-light: #F5F5F5;
+  --linear-gradient-dark: #E6E6E6;
+
+  --max-width: 1680px;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-theme);
+  font-weight: bold;
+}
+
+
+.bg-theme {
+background-color: var(--color-theme)
+}
+
+
+.svg-icon {
+position: relative;
+}
+
+.svg-icon:hover {
+filter: brightness(88%) contrast(100%); 
+
+}
+
+
+.btn-theme {
+position: relative;
+background-color: var(--color-theme);
+color: white;
+border: 0;
+height: 50px;
+width: 210px;
+}
+
+.btn-theme:hover {
+background-color: var(--color-dark);
+transition: all 0.3s ease-in-out;
+}
+
+.btn-theme .corner-topLeft {
+position:absolute;
+height: 20px;
+width: 20px;
+top: 10px;
+left: 20px;
+border-left: 1px solid white;
+border-top: 1px solid white;
+}
+
+.btn-theme .corner-bottomRight {
+position:absolute;
+height: 20px;
+width: 20px;
+bottom: 10px;
+right: 20px;
+border-right: 1px solid white;
+border-bottom: 1px solid white;
+}
+
+.btn-dark {
+position: relative;
+background-color: var(--color-dark);
+color: white;
+border: 0;
+height: 50px;
+width: 210px;
+}
+
+.btn-dark:hover {
+    background-color:var(--color-theme);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-dark .corner-topLeft {
+position:absolute;
+height: 20px;
+width: 20px;
+top: 10px;
+left: 20px;
+border-left: 1px solid white;
+border-top: 1px solid white;
+}
+
+.btn-dark .corner-bottomRight {
+position:absolute;
+height: 20px;
+width: 20px;
+bottom: 10px;
+right: 20px;
+border-right: 1px solid white;
+border-bottom: 1px solid white;
+}
+
+.btn-light {
+position: relative;
+background-color: white;
+color: var(--color-dark);
+border: 0;
+height: 50px;
+width: 210px;
+}
+
+.btn-light:hover {
+background-color:var(--color-theme);
+transition: all 0.3s ease-in-out;
+}
+
+.btn-light .corner-topLeft {
+position:absolute;
+height: 20px;
+width: 20px;
+top: 10px;
+left: 20px;
+border-left: 1px solid var(--color-dark);
+border-top: 1px solid var(--color-dark);
+}
+
+.btn-light .corner-bottomRight {
+position:absolute;
+height: 20px;
+width: 20px;
+bottom: 10px;
+right: 20px;
+border-right: 1px solid var(--color-dark);
+border-bottom: 1px solid var(--color-dark);
+}
+
+.gradient-background {
+background: var(--linear-gradient-dark);
+background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%);
+
+}

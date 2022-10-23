@@ -1,0 +1,17 @@
+.navigation {
+    margin-bottom: 50px;
+  
+    
+    .container {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+    
+            
+            .nav-links .active-link {
+                color: var(--color-theme);
+            } 
+
+}
+  
