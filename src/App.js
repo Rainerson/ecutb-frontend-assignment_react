@@ -1,12 +1,23 @@
 import './App.css';
-import Navbar from './components/Navbar.js';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Contacts from './views/Contacts';
+import Home from './views/Home';
+import NotFound from './views/NotFound';
+
+import React from 'react'
+
 
 function App() {
   return (
-    // Kallas för en fragment när det bara är taggar (?), allt måste vara inom denna (ett parent-element)
-    <>
-        <Navbar></Navbar>
-    </>
+    // <></> Kallas för en fragment när det bara är taggar (?), allt måste vara inom denna (ett parent-element)
+        <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/contacts' element={<Contacts></Contacts>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
+        </Routes>       
+        </BrowserRouter>
+
   );
 }
 

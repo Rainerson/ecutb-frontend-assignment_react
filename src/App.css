@@ -149,6 +149,19 @@
   background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%);
 
 }
+
+.fa-regular {
+  background-color: white;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  box-shadow: #616161 0px 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
   
 
 /* Individual */
@@ -170,3 +183,33 @@
           color: var(--color-theme);
       } 
       
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: var(--linear-gradient-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position:absolute;
+  width: 100%;
+  bottom: 0;
+
+}
+
+  .footer-socials {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font-size: 20px;
+  }
+
+    .footer-socials a {
+        margin-left:20px;
+    }
