@@ -22,9 +22,9 @@ const Navbar = () => {
                 </div>
                 <div className="nav-icon">
                     <NavIcon link="/search" icon="fa-regular fa-magnifying-glass"></NavIcon>
-                    <NavIcon link="/compare" icon="fa-regular fa-repeat"></NavIcon>
-                    <NavIcon link="/wishlist" icon="fa-regular fa-heart"></NavIcon>
-                    <NavIcon link="/shoppingcart" icon="fa-regular fa-bag-shopping"></NavIcon>   
+                    <NavIcon link="/compare" icon="fa-regular fa-code-compare"></NavIcon>
+                    <NavIcon quantity="5" link="/wishlist" icon="fa-regular fa-heart"></NavIcon>
+                    <NavIcon quantity="2" link="/shoppingcart" icon="fa-regular fa-bag-shopping"></NavIcon>   
                 </div>
             </div>
         </nav>
