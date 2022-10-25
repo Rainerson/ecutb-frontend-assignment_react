@@ -1,0 +1,23 @@
+footer {
+    background-color: var(--linear-gradient-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
+    width: 100%;
+    bottom: 0;
+
+    .footer-socials {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 20px;
+
+        .a {
+            margin-left:20px;
+        }
+    }
+  
+  
+  }
+  
