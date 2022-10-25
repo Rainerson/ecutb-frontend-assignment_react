@@ -6,7 +6,7 @@ import NavIcon from './NavIcon'
 const Navbar = () => {
     return (
         <nav className="navigation">
-            <div className="container">
+
                 <div className="logo">
                     <NavLink  to="/" end>
                         <img src={Logo} alt='Logo'/>
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <NavIcon quantity="5" link="/wishlist" icon="fa-regular fa-heart"></NavIcon>
                     <NavIcon quantity="2" link="/shoppingcart" icon="fa-regular fa-bag-shopping"></NavIcon>   
                 </div>
-            </div>
+
         </nav>
     )
 }

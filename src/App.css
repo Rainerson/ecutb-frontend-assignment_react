@@ -147,22 +147,25 @@
 /* Navigation */
   .navigation {
     margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "logo navlinks navicons";
+    justify-content: center;
+    align-items: center;
 }
 
-    .navigation .container {
-      display: flex;
-      justify-content:space-between;
-      align-items: center;
+    .navigation .nav-links {
+      text-align: center;
     }
     
-    .navigation .container .nav-icon {
+    .navigation  .nav-icon {
       display: flex;
       justify-content:flex-end;
       align-items: center;
       position: relative;
     }
 
-    .navigation .container .nav-icon .fa-regular {
+    .navigation  .nav-icon .fa-regular {
       background-color: white;
       border-radius: 50%;
       width: 37px;
@@ -200,5 +203,5 @@ footer {
   }
 
     .footer-socials a {
-        margin-left:20px;
+      padding: 10px;
     }
