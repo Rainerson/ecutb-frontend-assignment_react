@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import ProductCard from '../components/ProductCard'
+import {ProductContext} from '../contexts/contexts'
 
 
-function ProductGrid({title, products}) {
+function ProductGrid({title}) {
 
+    const products = useContext(ProductContext)
 
     return (
         <>

@@ -7,6 +7,7 @@ const ContactForm = () => {
     const regex_email = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
     const [canSubmit, setCanSubmit] = useState(false)
 
+
     // returnerar en error lista
     const validate = (values) => {
         const errors = {}
@@ -29,17 +30,13 @@ const ContactForm = () => {
             errors.comment = "A comment must be more than 5 characters"
 
 
-        if (Object.keys(errors).length === 0)
-            setCanSubmit(true)
-        else
-            setCanSubmit(false)
-
         return errors
     }
 
     const handleChange = (e) => {
         const { id, value } = e.target
         setContactForm({ ...contactForm, [id]: value })
+
     }
 
     
@@ -50,20 +47,50 @@ const ContactForm = () => {
             errors.name  = "Name cannot contain numbers"
             e.target.style.color = "red"}
         else 
-        e.target.style.color = "var(--color-dark)"
-                       
+        e.target.style.color = "var(--color-dark)"                
         
         setFormErrors(errors)
-        console.log(e.target)
-
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
+        const name = contactForm.name
+        const email = contactForm.email
+        const comments = contactForm.comment
+
+
         // Stoppar in kontaktformuläret i validate
         // "Set:ar" de errors som finns i formErrors som skrivs ut till användaren
         setFormErrors(validate(contactForm))
+
+        const errors = validate(contactForm)
+
+        if (errors.name && errors.email && errors.comment) {
+            console.log("Fel finns")
+        } else {
+
+            let json = JSON.stringify({ name, email, comments })
+            console.log(json)
+
+            fetch('https://win22-webapi.azurewebsites.net/api/contactform', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: json
+            })
+                .then(res => {
+                    console.log(res.status)
+
+                    if (res.status === 200) {
+                        setCanSubmit(true)
+                    } else
+                        setCanSubmit(false)
+                })
+
+
+        }
     }
 
 
