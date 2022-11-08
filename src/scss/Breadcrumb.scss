@@ -1,0 +1,25 @@
+
+  .breadcrumb-list {
+    width: 1110px;
+    margin: auto;
+    margin-bottom: 20px;
+    list-style: none;
+    color: var(--color-theme);
+
+
+        li {
+                display: inline-block;
+
+                &:hover {
+                    color: var(--color-theme);
+                    font-weight: bold;
+                  }
+        }
+
+
+        & + li:before {
+            content: '\00a0>\00a0';
+        }
+
+  }
+  

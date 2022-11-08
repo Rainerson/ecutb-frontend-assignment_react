@@ -5,14 +5,16 @@ import { useParams } from 'react-router-dom'
 
 const ProductDetails = () => {
 
+  window.top.document.title = ' Product | Fixxo'
+
     const params  = useParams()
-    console.log(params.productName)
+    console.log(params)
     
   return (
     <>
         <Navbar></Navbar>
         <div className='container'>
-            <h1>{params.productName}</h1>
+            <h1>{params.id}</h1>
         </div>
         <Footer></Footer>
     </>

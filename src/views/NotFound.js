@@ -3,6 +3,9 @@ import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 
 function NotFound() {
+
+  window.top.document.title = '404 | Fixxo'
+
   return (
     <>
       <Navbar></Navbar>

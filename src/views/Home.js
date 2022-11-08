@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 import ProductGrid from '../sections/ProductGrid'
+import Showcase from '../sections/Showcase'
 
 
 const Home = () => {
 
+  window.top.document.title = 'Fixxo'
 
   const [featuredProducts, setFeaturedProducts] = useState([
     { id:1, productName: "White T-shirt", category: "Fashion", price: "$35", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2012/04/14/16/20/t-shirt-34481_960_720.png" },
@@ -31,6 +33,7 @@ const Home = () => {
   return (
     <>
         <Navbar></Navbar>
+        <Showcase></Showcase>
         <ProductGrid title="Featured Products" products={featuredProducts}></ProductGrid>
         <ProductGrid title="Top Products" products={topProducts}></ProductGrid>
         <Footer></Footer>
