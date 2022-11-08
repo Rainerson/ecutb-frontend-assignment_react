@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { submitData } from '../script/fetch-api'
 
 const ContactForm = () => {
 
@@ -52,7 +53,7 @@ const ContactForm = () => {
         setFormErrors(errors)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         const name = contactForm.name
@@ -73,21 +74,27 @@ const ContactForm = () => {
             let json = JSON.stringify({ name, email, comments })
             console.log(json)
 
-            fetch('https://win22-webapi.azurewebsites.net/api/contactform', {
-                method: 'POST',
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: json
-            })
-                .then(res => {
-                    console.log(res.status)
+            if(await submitData('https://win22-webapi.azurewebsites.net/api/contactform', 'POST', json)) {
+                setCanSubmit(true)
+            } else {
+                setCanSubmit(false)
+            }
 
-                    if (res.status === 200) {
-                        setCanSubmit(true)
-                    } else
-                        setCanSubmit(false)
-                })
+            // const result = await fetch('https://win22-webapi.azurewebsites.net/api/contactform', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-type': 'application/json'
+            //     },
+            //     body: json
+            // })
+            //     .then(res => {
+            //         console.log(res.status)
+
+            //         if (res.status === 200) {
+            //             setCanSubmit(true)
+            //         } else
+            //             
+            //     })
 
 
         }

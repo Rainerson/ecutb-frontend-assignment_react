@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Contacts from './views/Contacts';
 import Home from './views/Home';
@@ -13,17 +13,26 @@ import { ProductContext } from './contexts/contexts'
 function App() {
 
 
-  const [products, setProducts] = useState([
-    { id: 1, productName: "White T-shirt", category: "Fashion", price: "$35", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2012/04/14/16/20/t-shirt-34481_960_720.png" },
-    { id: 2, productName: "Party Hat", category: "Fashion", price: "$25", rating: 5, imgUrl: 'https://cdn.pixabay.com/photo/2014/04/03/10/44/hat-311271_960_720.png' },
-    { id: 3, productName: "Conversl Shoe", category: "Animal", price: "$555", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2013/07/12/18/20/shoes-153310_960_720.png" },
-    { id: 4, productName: "Modern Black sheep", category: "Animal", price: "$555", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2014/04/03/11/59/sheep-312776_960_720.png" },
-    { id: 5, productName: "Top Hat", category: "Fashion", price: "$15", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2014/04/03/11/58/topper-312765_960_720.png" },
-    { id: 6, productName: "Socks", category: "Fashion", price: "$15", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2014/04/02/16/17/socks-306802_960_720.png" },
-    { id: 7, productName: "Socks", category: "Fashion", price: "$15", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2014/04/02/16/17/socks-306802_960_720.png" },
-    { id: 8, productName: "Socks", category: "Fashion", price: "$15", rating: 5, imgUrl: "https://cdn.pixabay.com/photo/2014/04/02/16/17/socks-306802_960_720.png" }
-  ])
+  const [products, setProducts] = useState({
+    allProducts: [],
+    featuredProducts: []
+  })
 
+  useEffect(() => {
+
+    const  fetchAllProducts = async () => {
+          let result = await fetch('https://win22-webapi.azurewebsites.net/api/products')
+          setProducts({...products, allProducts: await result.json()})
+    }
+    fetchAllProducts()
+
+    const  fetchFeaturedProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=8')
+      setProducts({...products, featuredProducts: await result.json()})
+    }
+    fetchFeaturedProducts()
+
+  }, [products, setProducts])
 
 
 
