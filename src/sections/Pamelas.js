@@ -1,14 +1,14 @@
 import React from 'react'
-import brownBackground from '../assets/images/pamelas-brown.svg'
-import greyBackground from '../assets/images/concious-grey.svg'
+import brownBackground from '../assets/images/5.png'
+import greyBackground from '../assets/images/6.png'
 
 function Pamelas() {
     return (
         <>
             <section className="images-section">
                 <div className="container">
-                    <div className="brown-image">
-
+                    <div className="brown-image" style={{backgroundColor:'#75695c'}}>
+                        <img src={brownBackground} alt='brown'></img>
                         <div className="brown-image-text">
                             <h1>Pamela Reif's</h1>
                             <h1>Top Picks</h1>
@@ -17,11 +17,11 @@ function Pamelas() {
                                 <span className="corner-bottomRight"></span>
                             </button>
                         </div>
-                        <img src={brownBackground} alt='brown'></img>
-                    </div>
-                    <div className="grey-image">
-                        <div className="grey-image-text">
 
+                    </div>
+                    <div className="grey-image" style={{backgroundColor:'#d9d9d9'}}>
+                    <img src={greyBackground} alt='grey'></img>
+                        <div className="grey-image-text">
                             <h1>Let's Be</h1>
                             <h1>Conscious</h1>
                             <button className="btn-light">FLASH SALE
@@ -30,7 +30,7 @@ function Pamelas() {
                             </button>
                         </div>
 
-                        <img src={greyBackground} alt='grey'></img>
+
                     </div>
 
                 </div>

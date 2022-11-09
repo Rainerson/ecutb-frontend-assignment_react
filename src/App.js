@@ -15,7 +15,8 @@ function App() {
 
   const [products, setProducts] = useState({
     allProducts: [],
-    featuredProducts: []
+    featuredProducts: [],
+    fourProducts: []
   })
 
   useEffect(() => {
@@ -31,6 +32,12 @@ function App() {
       setProducts({...products, featuredProducts: await result.json()})
     }
     fetchFeaturedProducts()
+
+    const  fetchFourProducts = async () => {
+      let result = await fetch('https://win22-webapi.azurewebsites.net/api/products?take=4')
+      setProducts({...products, fourProducts: await result.json()})
+    }
+    fetchFourProducts()
 
   }, [products, setProducts])
 

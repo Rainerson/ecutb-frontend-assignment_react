@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import Logo from '../assets/images/logo.svg'
 import NavIcon from '../components/NavIcon'
+
 
 const Navbar = () => {
     return (
@@ -15,8 +16,8 @@ const Navbar = () => {
                 </div>
                 <div className="nav-links">
                     <NavLink to="/" className="m-3" end>Home</NavLink>
-                    <NavLink to="/categories" className="m-3" end>Categories</NavLink>
-                    <NavLink to="/products" className="m-3">Products</NavLink>
+                    <NavLink to="/categories" className="m-3"  end>Categories</NavLink>
+                    <NavLink to="/products" className="m-3"  >Products</NavLink>
                     <NavLink to="/contacts" className="m-3" end>Contact</NavLink>
 
                 </div>

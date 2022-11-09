@@ -19,10 +19,13 @@ const Home = () => {
 
   return (
     <>
+
+    {/* Lösning av Elvin Javadov */}
+    <div className='gradient-background'>
         <Navbar></Navbar>
+    </div>
         <Showcase></Showcase>
         <ProductGrid title="Featured Products" items={productContext.featuredProducts}></ProductGrid>
-        {/* <ProductGrid title="Top Products"></ProductGrid> */}
         <Pamelas></Pamelas>
         <TwoForTwentynine></TwoForTwentynine>
         <TwoForFortynine></TwoForFortynine>

@@ -109,7 +109,7 @@ const ContactForm = () => {
                     <p>Come in Contact with Us</p>
 
                     {
-                        canSubmit ? (<div className='d-flex justify-content-center align-items-center'>Thank you for your comment!</div>)
+                        canSubmit ? (<div className='d-flex justify-content-center align-items-center alert alert-success'>Thank you for your comment!</div>)
                             :
                             (
                                 <>

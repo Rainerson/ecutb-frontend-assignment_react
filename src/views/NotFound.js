@@ -9,10 +9,10 @@ function NotFound() {
   return (
     <>
       <Navbar></Navbar>
-      <h1><p>404</p>- Page Not Found - </h1>
+      <center><h1>404 - NotFound</h1></center>
       <Footer></Footer>
     </>
-  )
+    )
 }
 
 export default NotFound
