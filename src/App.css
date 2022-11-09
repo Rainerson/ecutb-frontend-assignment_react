@@ -398,25 +398,74 @@
 /* Two for 29 */
 
 
-.two-for {
+.two-for-twenty {
   margin-top: 100px;
 }
 
-.two-for .container {
+.two-for-twenty .container {
   display: flex;
   text-align: center;
   height: 670px;
 }
 
-.two-for .container .two-for-div {
+.two-for-twenty .container .two-for-div {
  background-color: #f5f5f5;
  width: 810px;
  margin-right:40px;
 }
 
-.two-for .container .two-for-boxes { 
+.two-for-twenty .container .two-for-boxes { 
   width: 540px;
   justify-content: flex-start;
+}
+
+
+/* Two for 49 */
+
+
+.two-for-forty {
+  margin-top: 100px;
+}
+
+.two-for-forty  .container {
+  display: flex;
+  text-align: center;
+  height: 670px;
+}
+
+.two-for-forty  .container .two-for-div {
+ background-color: #f5f5f5;
+ width: 810px;
+}
+
+.two-for-forty  .container .two-for-boxes { 
+  width: 540px;
+}
+
+/* Services */
+
+.services .container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  height: 315px;
+  border-top: 2px solid var(--linear-gradient-dark);
+  align-items: center;
+  text-align: center;
+}
+
+.services .container .fa-regular {
+  background-color: white;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  font-size: 2rem;
+  box-shadow: #616161 0px 0px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 /* Contact */
@@ -484,7 +533,6 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position:fixed;
   width: 100%;
   bottom: 0;
 
@@ -503,6 +551,10 @@ footer {
 
     @media (min-width:1200px) {
       .product-grid .container {
+        max-width: 1100px; 
+      }
+
+      .services .container {
         max-width: 1100px; 
       }
     }

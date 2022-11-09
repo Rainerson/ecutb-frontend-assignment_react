@@ -3,9 +3,11 @@ import { ProductContext } from '../contexts/contexts'
 import Footer from '../sections/Footer'
 import Navbar from '../sections/Navbar'
 import Pamelas from '../sections/Pamelas'
-import twoForTwentyNine from '../sections/twoForTwentyNine'
 import ProductGrid from '../sections/ProductGrid'
 import Showcase from '../sections/Showcase'
+import TwoForTwentynine from '../sections/TwoForTwentynine'
+import TwoForFortynine from '../sections/TwoForFortynine'
+import Services from '../sections/Services'
 
 
 const Home = () => {
@@ -22,8 +24,12 @@ const Home = () => {
         <ProductGrid title="Featured Products" items={productContext.featuredProducts}></ProductGrid>
         {/* <ProductGrid title="Top Products"></ProductGrid> */}
         <Pamelas></Pamelas>
-        <twoForTwentyNine></twoForTwentyNine>
+        <TwoForTwentynine></TwoForTwentynine>
+        <TwoForFortynine></TwoForFortynine>
+        <Services></Services>
         <Footer></Footer>
+      
+
     </>
   )
 }

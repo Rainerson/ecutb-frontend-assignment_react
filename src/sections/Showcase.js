@@ -1,4 +1,6 @@
 import React from 'react'
+import imageOne from '../assets/images/1.png'
+import imageTwo from '../assets/images/2.png'
 
 function Showcase() {
   return (
@@ -6,7 +8,7 @@ function Showcase() {
         <section className="gradient-background">
         <div className="showcase">
             <div className="container">
-                <img src="..\images\girl-chair.svg" className="showcase-img-girl" alt="girl"></img>
+                <img src={imageOne} className="showcase-img-girl" alt="girl"></img>
                 <div className="showcase-sale">
                     <h1>SALE UP</h1>
                     <h1>To 50% Off</h1>
@@ -16,7 +18,7 @@ function Showcase() {
                         <span className="corner-bottomRight"></span>
                     </button>
                 </div>
-                <img src="..\images\oklar-bild.svg" className="showcase-img-man" alt="man"></img>
+                <img src={imageTwo} className="showcase-img-man" alt="man"></img>
             </div>
         </div>
     </section>

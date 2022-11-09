@@ -1,9 +1,9 @@
 import React from 'react'
 
-function twoForTwentyNine() {
+function TwoForTwentynine() {
     return (
         <>
-            <section className="two-for">
+            <section className="two-for-twenty">
                 <div className="container">
                     <div className="two-for-div">
                         <h1>2 FOR USD $29</h1>
@@ -23,4 +23,4 @@ function twoForTwentyNine() {
     )
 }
 
-export default twoForTwentyNine
+export default TwoForTwentynine
