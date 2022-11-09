@@ -354,8 +354,72 @@
 }
 
 
-/* Contact */
 
+/* Images section / Pamelas */
+
+.images-section .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+  .images-section .container .brown-image {
+      width: 810px;
+      overflow: hidden;
+  }
+
+      .images-section .container .brown-image-text {
+          position: relative;
+          top: 50%;
+          left: 55%;
+      }
+
+          .images-section .container .brown-image-text h1 {
+              font-weight: 700;
+              color: white;
+          }
+
+  .images-section .container .grey-image {
+      width: 810px;
+      overflow: hidden;
+  }
+  
+      .images-section .container .grey-image-text {
+          position: relative;
+          top: 50%;
+          left: 5%;
+      }
+
+          .images-section .container .grey-image-text h1 {
+              font-weight: 700;
+          }
+
+
+/* Two for 29 */
+
+
+.two-for {
+  margin-top: 100px;
+}
+
+.two-for .container {
+  display: flex;
+  text-align: center;
+  height: 670px;
+}
+
+.two-for .container .two-for-div {
+ background-color: #f5f5f5;
+ width: 810px;
+ margin-right:40px;
+}
+
+.two-for .container .two-for-boxes { 
+  width: 540px;
+  justify-content: flex-start;
+}
+
+/* Contact */
 
 .map-div #map {
   border:0; 
